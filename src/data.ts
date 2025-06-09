@@ -1,15 +1,21 @@
-const initialTickets = [
+type Ticket = {
+  id: string;
+  title: string;
+  content: string;
+  status: "DONE" | "OPEN" | "IN PROGRESS";
+};
+const initialTickets: Ticket[] = [
   {
     id: "1",
     title: "ticket 1",
     content: "This is the first ticket",
-    status: "Done",
+    status: "DONE",
   },
   {
     id: "2",
     title: "ticket 2",
     content: "This is the second ticket",
-    status: "Done",
+    status: "DONE",
   },
 ];
 
