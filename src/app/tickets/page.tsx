@@ -16,7 +16,7 @@ const TicketsPage = () => {
         return (
           <div key={ticket.id}>
             <div>{TICKET_ICON[ticket.status]}</div>
-            <h1>{ticket.title}</h1>
+            <div>{ticket.title}</div>
             <Link href={ticketPath(ticket.id)} className="underline text-sm">
               go to {ticket.id} page
             </Link>
