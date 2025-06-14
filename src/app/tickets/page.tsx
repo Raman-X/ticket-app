@@ -11,6 +11,7 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 
 const CheckIcon = () => (
   <svg
@@ -64,6 +65,7 @@ const TicketsPage = () => {
         <h1 className="text-3xl font-bold tracking-tight">Tickets</h1>
         <p className="text-sm ">All your tickets at one place</p>
       </div>
+      <Separator />
       <div className="flex-1 flex flex-col items-center gap-y-4 animate-fade-in-from-top">
         {inititalTickets.map((ticket) => {
           return (
