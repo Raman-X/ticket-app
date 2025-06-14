@@ -7,13 +7,13 @@ type Ticket = {
 const initialTickets: Ticket[] = [
   {
     id: "1",
-    title: "ticket 1",
+    title: "Ticket 1",
     content: "This is the first ticket",
     status: "DONE",
   },
   {
     id: "2",
-    title: "ticket 2",
+    title: "Ticket 2",
     content: "This is the second ticket",
     status: "DONE",
   },
