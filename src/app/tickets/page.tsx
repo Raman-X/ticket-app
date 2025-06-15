@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { CircleCheck, File, Pencil } from "lucide-react";
+import Heading from "@/components/heading";
 
 const TICKET_ICON = {
   OPEN: <CircleCheck />,
@@ -23,11 +24,7 @@ const TICKET_ICON = {
 const TicketsPage = () => {
   return (
     <div className="flex flex-1 flex-col gap-y-8">
-      <div>
-        <h1 className="text-3xl font-bold tracking-tight">Tickets</h1>
-        <p className="text-sm ">All your tickets at one place</p>
-      </div>
-      <Separator />
+      <Heading title="Tickets" description="All your ticiets at one place" />
       <div className="flex-1 flex flex-col items-center gap-y-4 animate-fade-in-from-top">
         {inititalTickets.map((ticket) => {
           return (
