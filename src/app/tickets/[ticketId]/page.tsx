@@ -1,4 +1,8 @@
+import Placeholder from "@/components/placeholder";
+import { Button } from "@/components/ui/button";
 import initialTickets from "@/data";
+import { ticketsPath } from "@/paths";
+import Link from "next/link";
 
 type TicketPageProps = {
   params: Promise<{
@@ -6,11 +10,20 @@ type TicketPageProps = {
   }>;
 };
 
-const ticketId = async ({ params }: TicketPageProps) => {
+const ticketPage = async ({ params }: TicketPageProps) => {
   const ticketId = (await params).ticketId;
   const ticket = initialTickets.find((ticket) => ticket.id === ticketId);
   if (!ticket) {
-    return <>ticket not found</>;
+    return (
+      <Placeholder
+        label="Ticket not found"
+        button={
+          <Button variant="outline" asChild>
+            <Link href={ticketsPath()}>Go to Tickets</Link>
+          </Button>
+        }
+      />
+    );
   }
   return (
     <>
@@ -21,4 +34,4 @@ const ticketId = async ({ params }: TicketPageProps) => {
     </>
   );
 };
-export default ticketId;
+export default ticketPage;

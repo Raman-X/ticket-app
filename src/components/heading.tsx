@@ -6,7 +6,7 @@ type HeadingProps = {
   description?: string;
 };
 
-const heading = ({ title, description }: HeadingProps) => {
+const Heading = ({ title, description }: HeadingProps) => {
   return (
     <>
       <div className="px-8">
@@ -20,4 +20,4 @@ const heading = ({ title, description }: HeadingProps) => {
   );
 };
 
-export default heading;
+export default Heading;
