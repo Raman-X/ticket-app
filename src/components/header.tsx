@@ -1,8 +1,8 @@
-import React from "react";
-import { Button } from "./ui/button";
-import Link from "next/link";
-import { Kanban } from "lucide-react";
 import { homePath, ticketsPath } from "@/paths";
+import { Kanban } from "lucide-react";
+import Link from "next/link";
+import { ThemeSwitcher } from "./themes/theme-switcher";
+import { Button } from "./ui/button";
 
 const Header = () => {
   return (
@@ -23,7 +23,8 @@ const Header = () => {
           </Button>
         </div>
         <div>
-          <Button asChild variant={"default"}>
+          <ThemeSwitcher />
+          <Button asChild variant={"default"} className="ml-2">
             <Link href={ticketsPath()}>Tickets</Link>
           </Button>
         </div>
